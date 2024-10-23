@@ -17,25 +17,25 @@ type pizza struct {
 	cost          float64
 	timeToPrepare time.Duration
 }
-type pizzaMap struct {
+type PizzaMap struct {
 	p map[int]pizza
 }
-type orderMap struct {
+type OrderMap struct {
 	o map[int]Order
 }
-type statusMap struct {
+type StatusMap struct {
 	s map[int]string
 }
 
-func NewStatusMap() *statusMap {
-	return &statusMap{map[int]string{1: "Ожидание", 2: "В процессе", 3: "Готов", 4: "Отменен"}}
+func NewStatusMap() *StatusMap {
+	return &StatusMap{map[int]string{1: "Ожидание", 2: "В процессе", 3: "Готов", 4: "Отменен"}}
 }
-func NewOrderMap() orderMap {
-	return orderMap{map[int]Order{}}
+func NewOrderMap() *OrderMap {
+	return &OrderMap{map[int]Order{}}
 }
 
-func NewPizzaMap() *pizzaMap {
-	return &pizzaMap{map[int]pizza{
+func NewPizzaMap() *PizzaMap {
+	return &PizzaMap{map[int]pizza{
 		1: {1, "Маргарита", 10, 5 * time.Minute},
 		2: {2, "Пеперони", 15, 7 * time.Minute},
 		3: {3, "Сырная", 18, 6 * time.Minute},
