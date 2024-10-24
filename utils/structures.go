@@ -21,7 +21,7 @@ type PizzaMap struct {
 	p map[int]pizza
 }
 type OrderMap struct {
-	o map[int]Order
+	O map[int]Order
 }
 type StatusMap struct {
 	s map[int]string
