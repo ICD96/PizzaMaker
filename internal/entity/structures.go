@@ -1,30 +1,30 @@
-package utils
+package entity
 
 import "time"
 
 type Order struct {
-	id            int
-	timeCreated   time.Time
-	creatorName   string
-	status        string
-	orderCost     float64
-	orderedPizza  []pizza
-	timeToPrepare time.Duration
+	Id            int
+	TimeCreated   time.Time
+	CreatorName   string
+	Status        string
+	OrderCost     int
+	TimeToPrepare time.Duration
+	OrderedPizza  []int
 }
 type pizza struct {
-	id            int
-	name          string
-	cost          float64
-	timeToPrepare time.Duration
+	Id            int
+	Name          string
+	Cost          int
+	TimeToPrepare time.Duration
 }
 type PizzaMap struct {
-	p map[int]pizza
+	P map[int]pizza
 }
 type OrderMap struct {
 	O map[int]Order
 }
 type StatusMap struct {
-	s map[int]string
+	S map[int]string
 }
 
 func NewStatusMap() *StatusMap {
